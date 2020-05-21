@@ -1,0 +1,37 @@
+{
+  "name": "keepview.github.io",
+  "title": "keepview Blog",
+  "author": "zhangx <keepview.cn>",
+  "license": "MIT",
+  "version": "1.0.0",
+  "homepage": "http://keepview.github.io/Node",
+  "keywords": [
+    "note",
+    "blog",
+    "codes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keepview/keepview.github.io"
+  },
+  "bugs": "https://github.com/keepview/keepview.github.io/issues",
+  "description": "",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^3.1.0",
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.3",
+    "@vuepress/plugin-medium-zoom": "1.2.0",
+    "@vuepress/plugin-pwa": "^1.2.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-mark": "^3.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-ribbon": "^1.0.0",
+    "vuepress-theme-reco": "^1.2.2",
+    "vuepress-plugin-flowchart": "1.4.3"
+  }
+}

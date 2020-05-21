@@ -1,0 +1,1 @@
+[![](https://travis-ci.com/yefz/blog.svg?branch=master)](https://travis-ci.com/)
