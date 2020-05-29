@@ -17,8 +17,8 @@
   "bugs": "https://github.com/keepview/keepview.github.io/issues",
   "description": "",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
   "dependencies": {
