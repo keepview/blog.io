@@ -18,7 +18,8 @@
   "description": "",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^3.1.0",
