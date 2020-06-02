@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'keepview',
-  description: '没事儿也要找事儿~',
+  title: 'KeepView',
+  description: 'STAY HUNGRY,STAY FOOLISH',
   evergreen: true,
   dest: 'dist',
   locales: { '/': { lang: 'zh-CN' } },
@@ -49,7 +49,12 @@ module.exports = {
   ],
   theme: 'reco',
   themeConfig: {
+    // 博客模式
     type: 'blog',
+     // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
+    mode: 'light',
+     // 默认 true，false 不显示模式调节按钮，true 则显示
+    modePicker: true,
     // 自动隐藏导航
     autoHideNavbar: true,
     // 主题颜色选择
@@ -64,35 +69,47 @@ module.exports = {
     sidebarDepth: 2,
     // 最后更新时间
     lastUpdated: '上次更新',
+    // 首页右侧信息栏头像
+    authorAvatar: '/images/avatar.png',
     // 博客设置
     blogConfig: {
       category: {
         location: 4, // 在导航栏菜单中所占的位置，默认2
-        text: '分类', // 默认 “分类”
+        text: 'Category', // 默认 “分类”
       },
       tag: {
         location: 4, // 在导航栏菜单中所占的位置，默认3
-        text: '标签', // 默认 “标签”
+        text: 'Tags', // 默认 “标签”
       },
     },
-    logo: '/images/logo.png',
+    // 导航栏左侧 logo
+    logo: '/images/head.png',
     // 作者
     author: 'keepview',
     // 项目开始时间，只填写年份
     startYear: '2020',
     // 备案号
-    record: "****",
+    // record: "****",
     // 顶部导航设置
     nav: [
-      { text: '主页', link: '/', icon: 'reco-home' },
+      { text: 'Home', link: '/', icon: 'reco-home' },
       { 
-        text: '知识体系',  
+        text: 'Portal',  
         icon: 'reco-category',
         link: '/note/前端知识体系汇总.md',
       },
-      { text: '流年', link: '/timeLine/', icon: 'reco-date' },
-      { text: 'GitHub', link: 'https://github.com/yefz', icon: 'reco-github' },
+      { text: 'Stack', link: '/timeLine/', icon: 'reco-date' },
+      { text: 'GitHub', link: 'https://github.com/keepview', icon: 'reco-github' },
     ],
+    // valine评论配置
+    valineConfig: {
+      appId: 'wkqPUIoAl0ECaGU5rBm6yrdX-gzGzoHsz', // your appId
+      appKey: 'TSwfqGqUD7jLhPEKaM8m6paT',
+      placeholder: '填写邮箱可以收到回复提醒哦！',
+      notify: true,
+      recordIP: true,
+    },
+
     // 密钥 (if your blog is private)
     // keyPage: {
     //   keys: ['your password'],
@@ -100,21 +117,14 @@ module.exports = {
     //   lineColor: '#42b983'
     // },
 
-    valineConfig: {
-      appId: 'CgHo1Nf19RJc4dUzWTGACjwR-gzGzoHsz', // your appId
-      appKey: 'of84Nx1usWBJBR3mXAcNzBV5',
-      placeholder: '填写邮箱可以收到回复提醒哦！',
-      notify: true,
-      recordIP: true,
-    },
-    // https://github.com/yefz/blog
+    // https://github.com/keepview/blog
     // https://github.com/${owner}/${repo}
     // vssueConfig: {
     //   platform: 'github',
-    //   owner: 'yefz',
+    //   owner: 'keepview',
     //   repo: 'blog',
-    //   clientId: '9aaec055b30d64139e6a',
-    //   clientSecret: 'f0194b3a26d3a12ce64e4e3d465a8c6911e5f143'
+    //   clientId: '',
+    //   clientSecret: ''
     // },
   },
 }

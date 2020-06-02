@@ -5,7 +5,8 @@ publish: true
 sticky: 3
 categories:
   - 前端开发
-tags: 原生JS
+tags:
+  - 原生JS
 ---
 
 # 正则校验check工具函数

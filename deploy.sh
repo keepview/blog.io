@@ -13,7 +13,6 @@ git init
 git add -A
 git commit -m 'update docs'
 
-# git push -f git@github.com:keepview/blog.io.github.io.git master
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:keepview/blog.io.git master:gh-pages
 

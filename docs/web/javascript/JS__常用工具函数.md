@@ -5,7 +5,8 @@ publish: true
 sticky: 2
 categories:
   - 前端开发
-tags: 原生JS
+tags: 
+  - 原生JS
 ---
 
 ## 浏览器操作相关browser工具函数

@@ -4,7 +4,8 @@ date: 2018-04-20 21:41:49
 publish: true
 categories:
   - 前端开发
-tags: 原生JS
+tags: 
+  - 原生JS
 ---
 
 ## 合并字符串 concat()

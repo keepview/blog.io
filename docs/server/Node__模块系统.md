@@ -57,7 +57,7 @@ server.on('request',(request,response)=>{
   response.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
 
   // 排除多余响应
-  if(request.url !== '/favicon.ico'){
+  if(request.url !== '/logo.ico'){
   
     // 判断请求地址和请求方式
     if(request.url == '/' && request.method == 'GET'){

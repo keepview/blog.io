@@ -4,7 +4,8 @@ date: 2018-03-26 20:28:35
 publish: true
 categories:
   - 前端开发
-tags: 原生JS
+tags: 
+  - 原生JS
 ---
 
 ```javascript

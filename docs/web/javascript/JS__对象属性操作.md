@@ -4,7 +4,8 @@ date: 2018-04-26 07:56:43
 publish: true
 categories:
   - 前端开发
-tags: 原生JS
+tags: 
+  - 原生JS
 ---
 
 ## 数据属性（数据描述符）
