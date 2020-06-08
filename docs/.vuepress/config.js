@@ -99,6 +99,7 @@ module.exports = {
         link: '/note/前端知识体系汇总.md',
       },
       { text: 'Stack', link: '/timeLine/', icon: 'reco-date' },
+      { text: 'Resume', link: '/resume/个人简历.md', icon: 'reco-document' },
       { text: 'GitHub', link: 'https://github.com/keepview', icon: 'reco-github' },
     ],
     // valine评论配置
