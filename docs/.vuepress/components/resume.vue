@@ -1,10 +1,11 @@
 <script>
+import {getPdf} from '../public/utils/htmlToPdf.js';
 export default {
     data() {
         return {
 			name: 'ZhangXiang',
 			title: 'Developer · FE',
-			email: '1657422967@qq.com',
+			email: '18801289380@163.com',
 			lead: 'Development and design of web applications for startups and large companies',
 			skills: [{
 					exp: '+ 2 years',
@@ -16,16 +17,16 @@ export default {
 					desc: 'Style and tools, JS Frameworks'
 				}, {
 					exp: '+ 1 years',
-					title: 'Object programming & frameworks',
-					desc: 'TS, Vue, React, …'
+					title: 'Project management & Implementation plan',
+					desc: 'TS, Vue, React'
 				}
 			],
 			interests: [{
 					title: 'Scripting languages',
-					desc: 'PHP, JS, Bash, Python'
+					desc: 'JS, Bash, Python'
 				}, {
 					title: 'Hacking',
-					desc: 'Linux, Crawlers, Bots, Network'
+					desc: 'Linux, C#, Network'
 				}
 			],
 			achievements: [{
@@ -60,17 +61,20 @@ export default {
 					date: 'Apr. 2019 - Sep. 2020'
 				}, {
 					line: '',
-					desc: 'Art & Design studies',
+					desc: 'Full Stack & Design studies',
 					date: 'Apr. 2020 - Sep. 2020'
 				}
 			]
         };
     },
-    components: {
+	components: {
     },
     computed: {
     },
     methods: {
+		getResumePdf() {
+			getPdf('container-content', 'ZhangX-FE-Resume');
+		}
     },
     async created() {
     }
@@ -78,11 +82,12 @@ export default {
 </script>
 
 <template>
-    <div class="container-content">
+    <div class="container-content" id="container-content">
 		<div class="container">
 			<div class="hero">
 				<h1 class="name">{{name}}</h1>
 				<span class="job-title">{{title}}</span>
+				<span class="job-title download" @click="getResumePdf">download resume</span>
 				<span class="email">{{email}}</span>
 				<h2 class="lead">{{lead}}</h2>
 			</div>
@@ -124,7 +129,7 @@ export default {
 			</div>
 		</div>
 		<!-- Timeeline -->
-		<div class="container">
+		<div class="container timeline-content">
 			<ol class="timeline">
 				<li v-for="item in timeeline">
 					<p class="line">{{item.line}}</p>
@@ -243,6 +248,18 @@ h1.name {
 	border-radius: 5px;
 	display: inline-block;
 	padding: 15px 25px;
+}
+.download {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.download:hover{
+	transform: scale(1.02);
+	transition: 0.5s;
+	background-color: #fff;
+	box-shadow: 0px 5px 50px -8px #ddd;
+	cursor: pointer;
 }
 
 .email {
@@ -381,6 +398,9 @@ h1.name {
 /* Achievements ends */
 
 /* Timeline styles*/
+.timeline-content {
+	height: 150px;
+}
 ol {
 	position: relative;
 	display: block;

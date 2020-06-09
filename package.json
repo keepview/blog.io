@@ -26,13 +26,15 @@
     "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.3",
     "@vuepress/plugin-medium-zoom": "1.2.0",
     "@vuepress/plugin-pwa": "^1.2.0",
+    "html2canvas": "^1.0.0-rc.5",
+    "jspdf": "^1.5.3",
     "markdown-it": "^10.0.0",
     "markdown-it-mark": "^3.0.0",
     "markdown-it-task-lists": "^2.1.1",
     "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
     "vuepress": "^1.2.0",
+    "vuepress-plugin-flowchart": "1.4.3",
     "vuepress-plugin-ribbon": "^1.0.0",
-    "vuepress-theme-reco": "^1.2.2",
-    "vuepress-plugin-flowchart": "1.4.3"
+    "vuepress-theme-reco": "^1.2.2"
   }
 }
