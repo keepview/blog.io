@@ -1,5 +1,4 @@
 // 扩展 VuePress 应用
-// import {getPdf} from './public/utils/htmlToPdf.js'
 // import VueECharts from 'vue-echarts' //注册图表
   
 export default ({
@@ -9,6 +8,5 @@ export default ({
     siteData // 站点元数据
 }) => {
     // ...做一些其他的应用级别的优化
-    // Vue.use(getPdf)
     // Vue.component('chart', VueECharts)
 }
