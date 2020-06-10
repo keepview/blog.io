@@ -2,7 +2,7 @@
 title: JavaScript 数组
 date: 2018-04-20 22:18:50
 publish: true
-sticky: 1
+sticky: 4
 categories:
   - 前端开发
 ---

@@ -1,6 +1,6 @@
 ---
 title: JavaScript 常用工具函数
-date: 2018-04-20 12:44:12
+date: 2020-05-20 12:44:12
 publish: true
 sticky: 2
 categories:
@@ -8,6 +8,68 @@ categories:
 tags: 
   - 原生JS
 ---
+## 数据处理工具函数
+
+### 返回对象的类型
+``` javascript
+export function getObjectType(data) {
+    let type = typeof data;
+    if (type === 'object') {
+        let _type = Object.prototype.toString.call(data);
+        let len = _type.length
+        type = _type.substring(8,len-1).toLowerCase();
+    }
+    return type;
+}
+```
+
+### 对象深拷贝
+``` javascript
+export function deepClone(data) {
+    let type = getObjectType(data);
+    let obj;
+    if (type === 'array') {
+        obj = [];
+    } else if (type === 'object') {
+        obj = {};
+    } else {
+    // 不再具有下一层次
+        return data;
+    }
+    if (type === 'array') {
+        for (var i = 0, len = data.length; i < len; i++) {
+            obj.push(deepClone(data[i]));
+        }
+    } else if (type === 'object') {
+        for (var key in data) {
+            obj[key] = deepClone(data[key]);
+        }
+    }
+    return obj;
+}
+```
+``` html
+<button οnclick="copyToClip('内容')"> Copy </button>
+```
+
+### 计算两个数组的交集、差集、并集、补集
+``` javascript
+var a = [1,2,3,4,5]
+var b = [2,4,6,8,10]
+ 
+//交集
+var c = a.filter(function(v){ return b.indexOf(v) > -1 })
+ 
+//差集
+var d = a.filter(function(v){ return b.indexOf(v) == -1 })
+ 
+//补集
+var e = a.filter(function(v){ return !(b.indexOf(v) > -1) })
+        .concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}))
+ 
+//并集
+var f = a.concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}));
+```
 
 ## 浏览器操作相关browser工具函数
 

@@ -3,6 +3,7 @@ import {getPdf} from '../public/utils/htmlToPdf.js';
 export default {
     data() {
         return {
+			getPdf: '',
 			name: 'ZhangXiang',
 			title: 'Developer · FE',
 			email: '18801289380@163.com',
@@ -74,8 +75,15 @@ export default {
     methods: {
 		getResumePdf() {
 			getPdf('container-content', 'ZhangX-FE-Resume');
+			// this.getPdf('container-content', 'ZhangX-FE-Resume');
 		}
-    },
+	},
+	mounted () {
+		// htmlToPdf导入时就试图访问浏览器API,因此在组装钩子中动态导入，解决下载页面不全问题
+		// import('../public/utils/htmlToPdf.js').then(module => {
+		// 	this.getPdf = module.getPdf;
+		// })
+	},
     async created() {
     }
 };
@@ -218,6 +226,7 @@ div , footer {
 
 /*Hero section*/
 .container-content {
+	padding-top: 20px;
 	padding-bottom: 50px;
 }
 
@@ -250,7 +259,7 @@ h1.name {
 	padding: 15px 25px;
 }
 .download {
-	display: inline-block;
+	/* display: inline-block; */
 	cursor: pointer;
 }
 
@@ -502,6 +511,9 @@ li .description {
 
 /* Media queries*/
 @media(max-width: 1024px){
+	.container-content {
+		height: 2020px;
+	}
 	.container {
 		padding: 15px;
 		margin: 0px auto;
@@ -509,6 +521,9 @@ li .description {
 }
 
 @media(max-width: 768px){
+	.container-content {
+		height: 2020px;
+	}
 	.container {
 		padding: 15px;
 		margin: 0px auto;
@@ -540,6 +555,9 @@ li .description {
 }
 
 @media(max-width: 425px) {
+	.container-content {
+		height: 1820px;
+	}
 	h1.name {
 		font-size: 40px;
 	}
@@ -553,7 +571,7 @@ li .description {
 
 	.timeline{
 		display: none;
-		}
+	}
 
 	.job-title {
 		position: absolute;
@@ -561,6 +579,10 @@ li .description {
 		top: -40px;
 		right: 20px;
 		padding: 10px
+	}
+
+	.download {
+		display: none;
 	}
 
 	.lead {
